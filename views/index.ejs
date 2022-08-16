@@ -1,0 +1,15 @@
+<%- include('includes/head'); %>
+
+<body>
+    <%- include('includes/navigation'); %>
+    <main class="container">
+        <h1>Express JS Blog</h1>
+    <div class="row">
+        <% for(let post of postList) { %>
+        <%- include('includes/preview',{id : "/posts/" + post.id, title : post.title, content : post.content.substring(0, 200) + "..."}); %>
+        <% } %>
+    </div>
+    </main>
+    
+</body>
+</html>
