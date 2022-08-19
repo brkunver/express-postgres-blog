@@ -29,7 +29,7 @@ app.use((req, res) => {
 posts
   .sync()
   .then(() => {
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
     console.log("app started succesfully");
   })
   .catch((err) => console.log(err));
