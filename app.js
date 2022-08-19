@@ -30,6 +30,6 @@ posts
   .sync()
   .then(() => {
     app.listen(3000);
-    console.log("app started");
+    console.log("app started succesfully");
   })
   .catch((err) => console.log(err));
